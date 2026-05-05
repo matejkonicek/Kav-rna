@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zrnko — Specialty Coffee</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Cormorant Garamond + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- AOS – animace při scrollování -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGACE ========== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#home">
+        <span class="logo-mark">⌀</span> Zrnko
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"   class="nav-link">Domů</a></li>
+        <li><a href="#menu"   class="nav-link">Menu</a></li>
+        <li><a href="#about"  class="nav-link">O nás</a></li>
+        <li><a href="#gallery" class="nav-link">Galerie</a></li>
+        <li><a href="#contact" class="nav-link cta">Kontakt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SEKCE ========== -->
+  <section id="home" class="hero">
+    <!-- Autoplay video na pozadí -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <!-- Unsplash / pexels embed — nahraď vlastním videem -->
+      <source src="https://cdn.pixabay.com/video/2020/07/16/44802-440260915_large.mp4" type="video/mp4" />
+    </video>
+    <!-- Fallback obrázek pokud video nefunguje -->
+    <div class="hero-img-fallback"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-aos="fade-down" data-aos-delay="100">Specialty Coffee · Praha</p>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+        Nejlepší káva<br /><em>v širokém okolí</em>
+      </h1>
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="350">
+        Pečlivě vybrané  zrna,<br />připravené s láskou a péčí.
+      </p>
+      <a href="#menu" class="btn-outline" data-aos="fade-up" data-aos-delay="500">Prohlédnout menu</a>
+    </div>
+    <div class="hero-scroll">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section id="menu" class="section menu-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Naše nabídka</span>
+        <h2 class="section-title">Menu</h2>
+      </div>
+
+      <!-- Přepínač karet -->
+      <div class="menu-tabs" data-aos="fade-up" data-aos-delay="100">
+        <button class="tab-btn active" data-tab="coffee">Nápoje</button>
+        <button class="tab-btn" data-tab="food">Dezerty</button>
+      </div>
+
+      <!-- Nápoje -->
+      <div class="menu-grid" id="tab-coffee">
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Espresso</h3>
+            <p>Intenzivní výtažek z čerstvě mleté směsi. Čistá, přímočará.</p>
+            <span class="price">55 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Flat White</h3>
+            <p>Dvojitý espresso základ s hladkým hedvábným mlékem.</p>
+            <span class="price">79 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Pour Over</h3>
+            <p>Řízená extrakce single-origin zrn pro maximální chuť.</p>
+            <span class="price">89 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Cold Brew</h3>
+            <p>18 hodin studené extrakce. Přirozeně sladký, hedvábný.</p>
+            <span class="price">95 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1541167760496-1628856ab772?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Cappuccino</h3>
+            <p>Klasická italská trojice: espresso, pára, pěna.</p>
+            <span class="price">72 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1498804103079-a6351b050096?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Matcha Latte</h3>
+            <p>Ceremonial grade matcha s ovesným mlékem. Jemně zemitá.</p>
+            <span class="price">85 Kč</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dezerty (skryté) -->
+      <div class="menu-grid hidden" id="tab-food">
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Croissant</h3>
+            <p>Máslový, vrstevnatý, každé ráno čerstvý z pece.</p>
+            <span class="price">65 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Tiramisu</h3>
+            <p>Klasický italský dezert s espressem a mascarpone.</p>
+            <span class="price">110 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Cheesecake</h3>
+            <p>Pečený new york style se sezonním ovocem.</p>
+            <span class="price">95 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Brownies</h3>
+            <p>Čokoládové, hutné, s opečenými vlašskými ořechy.</p>
+            <span class="price">75 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Ovesné palačinky</h3>
+            <p>Lehké, výživné, podávané s javorovým sirupem.</p>
+            <span class="price">130 Kč</span>
+          </div>
+        </div>
+        <div class="menu-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&q=80')"></div>
+          <div class="menu-card-body">
+            <h3>Toustový chléb</h3>
+            <p>Kvásek s avokádem, pečenými rajčaty a vejcem.</p>
+            <span class="price">155 Kč</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== O NÁS ========== -->
+  <section id="about" class="section about-section">
+    <div class="container about-grid">
+      <div class="about-media" data-aos="fade-right">
+        <div class="about-img-wrap">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80" alt="Interiér kavárny" />
+          <div class="about-badge">Est. 2019</div>
+        </div>
+        <img class="about-img-sm" src="https://images.unsplash.com/photo-1520970014086-2208d157c9e2?w=400&q=80" alt="Barista" />
+      </div>
+      <div class="about-text" data-aos="fade-left" data-aos-delay="150">
+        <span class="section-label">Náš příběh</span>
+        <h2 class="section-title">Káva jako<br /><em>meditace</em></h2>
+        <p>
+          Zrnko vzniklo z jednoduché touhy — vytvořit místo, kde se čas zpomalí. Kde každý šálek je výsledkem záměrné práce, od farmy až po váš stůl.
+        </p>
+        <p>
+          Spolupracujeme přímo s pěstiteli v Etiopii, Kolumbii a Kostarice. Naše zrna jsou pražena jednou týdně v malých dávkách, aby si zachovala svoji svěžest.
+        </p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">12+</span><span class="stat-label">původů kávy</span></div>
+          <div class="stat"><span class="stat-num">6</span><span class="stat-label">let zkušeností</span></div>
+          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">šálků s láskou</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALERIE ========== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Atmosféra</span>
+        <h2 class="section-title">Galerie</h2>
+      </div>
+      <div class="gallery-grid">
+        <!-- Každý obrázek — kliknutím otevře lightbox -->
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0"   data-src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&q=90">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80" alt="Kavárna" />
+          <div class="gallery-overlay"><span>↗</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="80"  data-src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&q=90">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Káva" />
+          <div class="gallery-overlay"><span>↗</span></div>
+        </div>
+        <div class="gallery-item tall" data-aos="fade-up" data-aos-delay="160" data-src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&q=90">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Pour over" />
+          <div class="gallery-overlay"><span>↗</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0"   data-src="https://images.unsplash.com/photo-1520970014086-2208d157c9e2?w=1200&q=90">
+          <img src="https://images.unsplash.com/photo-1520970014086-2208d157c9e2?w=600&q=80" alt="Barista" />
+          <div class="gallery-overlay"><span>↗</span></div>
+        </div>
+        <div class="gallery-item wide" data-aos="fade-up" data-aos-delay="80"  data-src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&q=90">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" alt="Stůl" />
+          <div class="gallery-overlay"><span>↗</span></div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="160" data-src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&q=90">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Croissant" />
+          <div class="gallery-overlay"><span>↗</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <button class="lightbox-prev" id="lightboxPrev">&#8592;</button>
+      <button class="lightbox-next" id="lightboxNext">&#8594;</button>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    </div>
+  </section>
+
+  <!-- ========== KONTAKT ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info" data-aos="fade-right">
+        <span class="section-label">Najděte nás</span>
+        <h2 class="section-title">Kontakt</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-icon">◎</span>
+            <div><strong>Adresa</strong><br />Mánesova 12, Praha 2<br />120 00 Vinohrady</div>
+          </li>
+          <li>
+            <span class="contact-icon">◉</span>
+            <div><strong>Otevírací doba</strong><br />Po–Pá: 7:30 – 20:00<br />So–Ne: 8:30 – 19:00</div>
+          </li>
+          <li>
+            <span class="contact-icon">◈</span>
+            <div><strong>Telefon</strong><br />+420 777 123 456</div>
+          </li>
+          <li>
+            <span class="contact-icon">◇</span>
+            <div><strong>Email</strong><br />ahoj@zrnoaklid.cz</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Kontaktní formulář s validací -->
+      <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="150" novalidate>
+        <h3>Napište nám</h3>
+        <div class="form-group">
+          <label for="name">Jméno</label>
+          <input type="text" id="name" name="name" placeholder="Jan Novák" autocomplete="name" />
+          <span class="form-error" id="nameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="jan@email.cz" autocomplete="email" />
+          <span class="form-error" id="emailError"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Zpráva</label>
+          <textarea id="message" name="message" rows="5" placeholder="Napište nám cokoliv…"></textarea>
+          <span class="form-error" id="messageError"></span>
+        </div>
+        <button type="submit" class="btn-primary">Odeslat zprávu</button>
+        <p class="form-success hidden" id="formSuccess">✓ Zpráva odeslána. Brzy se ozveme!</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark large">⌀</span>
+        <p class="footer-tagline">Zrnko<br /><em>Specialty Coffee Praha</em></p>
+      </div>
+      <div class="footer-hours">
+        <h4>Otevírací doba</h4>
+        <ul>
+          <li><span>Pondělí – Pátek</span><span>7:30 – 20:00</span></li>
+          <li><span>Sobota</span><span>8:30 – 19:00</span></li>
+          <li><span>Neděle</span><span>8:30 – 18:00</span></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Sledujte nás</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+        <p class="footer-address">Mánesova 12, Praha 2</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Zrnko. Vyrobeno s&nbsp;láskou v Praze.</p>
+    </div>
+  </footer>
+
+  <!-- AOS knihovna -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
