@@ -29,6 +29,7 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
+  max-width: 100%;
   background: var(--cream);
   color: var(--brown);
   font-family: var(--ff-body);
